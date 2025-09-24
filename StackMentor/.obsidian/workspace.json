@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack.md",
+                "file": "Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stack"
+              "title": "Architecture"
             }
           }
         ],
@@ -182,8 +182,8 @@
   },
   "active": "9578d8d4f6078a3f",
   "lastOpenFiles": [
-    "Architecture.md",
     "Stack.md",
+    "Architecture.md",
     "Define user flows.md",
     "Define models.md",
     "Welcome.md"

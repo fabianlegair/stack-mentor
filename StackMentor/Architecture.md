@@ -54,7 +54,7 @@ Monitoring:
 [ CloudWatch ] <-- Receives logs/metrics from Backend, DB, Infra
 
 
-Flow Summary
+**Flow Summary**
 - App talks to backend through **API Gateway/Load Balancer**.
     
 - Backend runs in containers (ECS/EKS) and communicates with **PostgreSQL (RDS)**.
