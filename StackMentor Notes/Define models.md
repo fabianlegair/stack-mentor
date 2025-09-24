@@ -1,39 +1,41 @@
 **User Model**
 
-| Column              | Data Type   | Unique | Not Null |
-| ------------------- | ----------- | ------ | -------- |
-| user_id             | UUID        | ✓      | ✓        |
-| username            | VARCHAR(16) | ✓      | ✓        |
-| email               | VARCHAR(24) | ✓      | ✓        |
-| phone_number        | VARCHAR(10) | ✓      |          |
-| password_hash       | TEXT        |        | ✓        |
-| date_of_birth       | DATE        |        | ✓        |
-| city                | VARCHAR(26) |        |          |
-| state               | VARCHAR(2)  |        |          |
-| age                 | INT         |        |          |
-| profile_picture     | TEXT        |        |          |
-| bio                 | TEXT        |        |          |
-| mentor_mentee       | TEXT        |        |          |
-| job_title           | TEXT        |        |          |
-| years_of_experience | INT         |        |          |
-| areas_of_expertise  | TEXT        |        |          |
-| seeking_help_in     | TEXT        |        |          |
-| created_date        | TIMESTAMP   |        |          |
-| updated_date        | TIMESTAMP   |        |          |
+| Column              | Data Type    | Unique | Not Null |
+| ------------------- | ------------ | ------ | -------- |
+| user_id             | UUID         | ✓      | ✓        |
+| username            | VARCHAR(16)  | ✓      | ✓        |
+| email               | VARCHAR(100) | ✓      | ✓        |
+| phone_number        | VARCHAR(15)  | ✓      |          |
+| password_hash       | VARCHAR(255) |        | ✓        |
+| date_of_birth       | DATE         |        | ✓        |
+| city                | VARCHAR(26)  |        |          |
+| state               | VARCHAR(2)   |        |          |
+| age                 | INT          |        |          |
+| profile_picture_url | VARCHAR(255) |        |          |
+| bio                 | TEXT         |        |          |
+| mentor_status       | BOOLEAN      |        |          |
+| mentee_status       | BOOLEAN      |        |          |
+| job_title           | VARCHAR(100) |        |          |
+| years_of_experience | INT          |        |          |
+| industry            | VARCHAR(100) |        |          |
+| skills              | TEXT         |        |          |
+| interests           | TEXT         |        |          |
+| created_at          | TIMESTAMP    |        |          |
 
 
 **Message Model**
 
-| Column       | Data Type | Unique | Not Null |
-| ------------ | --------- | ------ | -------- |
-| message_id   | UUID      | ✓      | ✓        |
-| sender_id    | UUID      | ✓      | ✓        |
-| recipient_id | UUID      | ✓      |          |
-| group_id     | UUID      | ✓      |          |
-| content      | TEXT      |        |          |
-| media_url    | TEXT      |        |          |
-| sent_at      | TIMESTAMP |        | ✓        |
-| read_at      | TIMESTAMP |        |          |
+| Column      | Data Type    | Unique | Not Null |
+| ----------- | ------------ | ------ | -------- |
+| message_id  | UUID         | ✓      | ✓        |
+| sender_id   | UUID         | ✓      | ✓        |
+| receiver_id | UUID         | ✓      |          |
+| group_id    | UUID         | ✓      |          |
+| content     | TEXT         |        |          |
+| media_url   | VARCHAR(255) |        |          |
+| sent_at     | TIMESTAMP    |        | ✓        |
+| read_status | BOOLEAN      |        |          |
+| read_at     | TIMESTAMP    |        |          |
 
 **Group Model**
 
@@ -44,6 +46,7 @@
 | description | TEXT        |        |          |
 | created_by  | UUID        | ✓      | ✓        |
 | created_at  | TIMESTAMP   |        | ✓        |
+| members     | TEXT        |        |          |
 **Group Members Model**
 
 | Column    | Data Type   | Unique | Not Null |

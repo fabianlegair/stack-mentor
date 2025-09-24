@@ -1,4 +1,4 @@
 package io.stackmentor;
 
-public class service {
+public class service    {
 }
