@@ -1,4 +1,4 @@
-version: "3.9"
+
 
 services:
   postgres:
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: stackmentor
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -20,9 +20,9 @@ services:
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@local.com
-      pgADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_PASSWORD: admin
     ports:
-        - "8080:80"
+        - "9090:80"
     depends_on:
         - postgres
 
