@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Define models.md",
+                "file": "Stack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Define models"
+              "title": "Stack"
+            }
+          },
+          {
+            "id": "b8efba3dd366aedf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Track.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Track"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,12 +184,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "211619e87d05bef2",
+  "active": "b8efba3dd366aedf",
   "lastOpenFiles": [
-    "Architecture.md",
     "Stack.md",
-    "Define user flows.md",
+    "Track.md",
+    "Architecture.md",
     "Define models.md",
+    "Define user flows.md",
     "Welcome.md"
   ]
 }

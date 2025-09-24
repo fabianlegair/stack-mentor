@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="003" author="fabian-legair">
+        <sql>
+            INSERT INTO groups (
+            group_id, group_name, description, created_by, created_at, members
+            ) VALUES
+            (
+            '660e8400-e29b-41d4-a716-446655440001',
+            'StackMentors',
+            'A group for tech professionals to share knowledge and mentor each other.',
+            '550e8400-e29b-41d4-a716-446655440003',
+            NOW(),
+            '550e8400-e29b-41d4-a716-446655440004, 550e8400-e29b-41d4-a716-446655440003,
+            550e8400-e29b-41d4-a716-446655440002, 550e8400-e29b-41d4-a716-446655440001'
+            ),
+            (
+            '660e8400-e29b-41d4-a716-446655440002',
+            'BusinessConnect',
+            'Connecting business students with industry mentors for career growth.',
+            '550e8400-e29b-41d4-a716-446655440002',
+            NOW(),
+            '550e8400-e29b-41d4-a716-446655440002, 550e8400-e29b-41d4-a716-446655440004'
+            ),
+            (
+            '660e8400-e29b-41d4-a716-446655440003',
+            'DesignPros',
+            'A community for designers to collaborate, share resources, and find mentorship.',
+            '550e8400-e29b-41d4-a716-446655440003',
+            NOW(),
+            '550e8400-e29b-41d4-a716-446655440003, 550e8400-e29b-41d4-a716-446655440001'
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
