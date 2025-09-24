@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="002" author="fabian-legair">
+        <sql>
+
+            INSERT INTO users (
+                user_id, username, email, phone_number, password_hash, date_of_birth,
+                city, state, age, profile_picture_url, bio, mentor_status, mentee_status,
+                job_title, years_of_experience, industry, skills, interests, created_at
+            ) VALUES
+                  (
+                      '550e8400-e29b-41d4-a716-446655440001',
+                      'tech_jane',
+                      'jane.doe@example.com',
+                      '+14155550123',
+                      '$2b$12$abcdefghijk1234567890lmnopqrstuv', -- bcrypt hash placeholder
+                      '1990-04-15',
+                      'San Francisco',
+                      'CA',
+                      35,
+                      'https://example.com/profiles/jane.jpg',
+                      'Full-stack engineer passionate about mentoring women in tech.',
+                      TRUE,
+                      FALSE,
+                      'Senior Software Engineer',
+                      12,
+                      'Technology',
+                      'Python, JavaScript, React, AWS',
+                      'Hiking, mentoring, open-source',
+                      NOW()
+                  ),
+                  (
+                      '550e8400-e29b-41d4-a716-446655440002',
+                      'future_ceo',
+                      'michael.lee@example.com',
+                      '+13105557890',
+                      '$2b$12$lmnopqrstuv1234567890abcdefghijk',
+                      '2002-11-30',
+                      'Chicago',
+                      'IL',
+                      22,
+                      'https://example.com/profiles/michael.png',
+                      'Business student eager to connect with mentors in tech startups.',
+                      FALSE,
+                      TRUE,
+                      'Undergraduate Student',
+                      0,
+                      'Business',
+                      'Public Speaking, Excel, Market Research',
+                      'Startups, basketball, networking',
+                      NOW()
+                  ),
+                  (
+                      '550e8400-e29b-41d4-a716-446655440003',
+                      'design_guru',
+                      'sofia.wang@example.com',
+                      '+12125554321',
+                      '$2b$12$uvwxyz1234567890abcdefghijklmno',
+                      '1985-07-09',
+                      'New York',
+                      'NY',
+                      40,
+                      'https://example.com/profiles/sofia.png',
+                      'Creative director who loves helping juniors break into UX design.',
+                      TRUE,
+                      TRUE,
+                      'Creative Director',
+                      18,
+                      'Design',
+                      'UI/UX, Figma, Branding, Typography',
+                      'Art, traveling, teaching',
+                      NOW()
+                  ),
+                  (
+                      '550e8400-e29b-41d4-a716-446655440004',
+                      'data_ninja',
+                      'raj.patel@example.com',
+                      '+16175551234',
+                      '$2b$12$1234567890abcdefghijklmnopqrstuv',
+                      '1995-02-20',
+                      'Boston',
+                      'MA',
+                      30,
+                      'https://example.com/profiles/raj.jpeg',
+                      'Data scientist passionate about AI, finance, and mentorship.',
+                      TRUE,
+                      FALSE,
+                      'Data Scientist',
+                      7,
+                      'Finance',
+                      'Python, R, SQL, Machine Learning',
+                      'AI, fintech, chess',
+                      NOW()
+                  );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
