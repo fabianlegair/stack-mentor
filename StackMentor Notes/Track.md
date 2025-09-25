@@ -49,3 +49,4 @@ Built out main skeleton
 	docker-compose.yml
 
 Got the database to run in the docker container
+Got Spring to run in the container

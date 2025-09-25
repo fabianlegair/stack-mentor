@@ -10,11 +10,8 @@
             group_id, group_name, description, created_by, created_at, members
             ) VALUES
             (
-            '660e8400-e29b-41d4-a716-446655440001',
-            'StackMentors',
-            'A group for tech professionals to share knowledge and mentor each other.',
-            '550e8400-e29b-41d4-a716-446655440003',
-            NOW(),
+            '660e8400-e29b-41d4-a716-446655440001', 'StackMentors', 'A group for tech professionals to share knowledge
+            and mentor each other.', '550e8400-e29b-41d4-a716-446655440003', NOW(),
             '550e8400-e29b-41d4-a716-446655440004, 550e8400-e29b-41d4-a716-446655440003,
             550e8400-e29b-41d4-a716-446655440002, 550e8400-e29b-41d4-a716-446655440001'
             ),
