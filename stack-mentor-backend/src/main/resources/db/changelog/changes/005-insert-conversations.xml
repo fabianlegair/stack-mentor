@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="005" author="fabian-legair">
+        <sql>
+            -- Create conversation entries for each group
+            INSERT INTO conversations (
+            conversation_id, type, group_id, created_at
+            ) VALUES
+            (
+            '770e8400-e29b-41d4-a716-446655440001',
+            'group',
+            '660e8400-e29b-41d4-a716-446655440001',
+            NOW()
+            ),
+            (
+            '770e8400-e29b-41d4-a716-446655440002',
+            'group',
+            '660e8400-e29b-41d4-a716-446655440002',
+            NOW()
+            ),
+            (
+            '770e8400-e29b-41d4-a716-446655440003',
+            'group',
+            '660e8400-e29b-41d4-a716-446655440003',
+            NOW()
+            );
+            -- Create private conversation entries between users
+            INSERT INTO conversations (
+            conversation_id, type, group_id, created_at
+            ) VALUES
+            (
+            '880e8400-e29b-41d4-a716-446655440001',
+            'private',
+            NULL,
+            NOW()
+            ),
+            (
+            '880e8400-e29b-41d4-a716-446655440002',
+            'private',
+            NULL,
+            NOW()
+            ),
+            (
+            '880e8400-e29b-41d4-a716-446655440003',
+            'private',
+            NULL,
+            NOW()
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

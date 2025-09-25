@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="007" author="fabian-legair">
+        <sql>
+            -- Read status for StackMentors group messages
+            INSERT INTO message_read_status (
+            message_id, user_id, read_at
+            ) VALUES
+            -- Message 1 read by all group members
+            ('990e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440004', NOW() - INTERVAL '1 hour 45 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '1 hour 30 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440001', '550e8400-e29b-41d4-a716-446655440001', NOW() - INTERVAL '1 hour 15 minutes'),
+
+            -- Message 2 read by some members
+            ('990e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440003', NOW() - INTERVAL '1 hour 15 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440002', '550e8400-e29b-41d4-a716-446655440001', NOW() - INTERVAL '1 hour'),
+
+            -- Message 3 only read by sender and one other person
+            ('990e8400-e29b-41d4-a716-446655440003', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '30 minutes');
+
+            -- Read status for BusinessConnect group messages
+            INSERT INTO message_read_status (
+            message_id, user_id, read_at
+            ) VALUES
+            ('990e8400-e29b-41d4-a716-446655440004', '550e8400-e29b-41d4-a716-446655440004', NOW() - INTERVAL '2 hours'),
+            ('990e8400-e29b-41d4-a716-446655440005', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '2 hours');
+
+            -- Read status for direct messages (conversation between user 1 and user 2)
+            INSERT INTO message_read_status (
+            message_id, user_id, read_at
+            ) VALUES
+            ('990e8400-e29b-41d4-a716-446655440006', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '25 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440007', '550e8400-e29b-41d4-a716-446655440001', NOW() - INTERVAL '18 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440008', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '8 minutes');
+
+            -- Read status for direct messages (conversation between user 2 and user 3)
+            INSERT INTO message_read_status (
+            message_id, user_id, read_at
+            ) VALUES
+            ('990e8400-e29b-41d4-a716-446655440009', '550e8400-e29b-41d4-a716-446655440003', NOW() - INTERVAL '55 minutes'),
+            ('990e8400-e29b-41d4-a716-446655440010', '550e8400-e29b-41d4-a716-446655440002', NOW() - INTERVAL '45 minutes'
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -25,17 +25,15 @@
 
 **Message Model**
 
-| Column      | Data Type    | Unique | Not Null |
-| ----------- | ------------ | ------ | -------- |
-| message_id  | UUID         | ✓      | ✓        |
-| sender_id   | UUID         | ✓      | ✓        |
-| receiver_id | UUID         | ✓      |          |
-| group_id    | UUID         | ✓      |          |
-| content     | TEXT         |        |          |
-| media_url   | VARCHAR(255) |        |          |
-| sent_at     | TIMESTAMP    |        | ✓        |
-| read_status | BOOLEAN      |        |          |
-| read_at     | TIMESTAMP    |        |          |
+| Column          | Data Type    | Unique | Not Null |
+| --------------- | ------------ | ------ | -------- |
+| message_id      | UUID         | ✓      | ✓        |
+| conversation_id | UUID         | ✓      | ✓        |
+| sender_id       | UUID         | ✓      |          |
+| content         | TEXT         |        |          |
+| media_url       | VARCHAR(255) |        |          |
+| sent_at         | TIMESTAMP    |        | ✓        |
+
 
 **Group Model**
 
@@ -47,6 +45,7 @@
 | created_by  | UUID        | ✓      | ✓        |
 | created_at  | TIMESTAMP   |        | ✓        |
 | members     | TEXT        |        |          |
+
 **Group Members Model**
 
 | Column    | Data Type   | Unique | Not Null |
@@ -55,3 +54,27 @@
 | user_id   | UUID        | ✓      | ✓        |
 | role      | VARCHAR(15) |        |          |
 | joined_at | TIMESTAMP   |        |          |
+
+**Conversations Model**
+
+| Column                      | Data Type   | Unique | Not Null |
+| --------------------------- | ----------- | ------ | -------- |
+| conversation_id             | UUID        | ✓      | ✓        |
+| type<br>('DIRECT', 'GROUP') | VARCHAR(10) |        | ✓        |
+| group_id                    | UUID        |        |          |
+| created_at                  | TIMESTAMP   |        |          |
+
+**Direct Conversation Participants Model**
+
+| Column          | Data Type | Unique | Not Null |
+| --------------- | --------- | ------ | -------- |
+| conversation_id | UUID      |        |          |
+| user_id         | UUID      |        |          |
+
+**Message Read Status Model**
+
+| Column     | Data Type | Unique | Not Null |
+| ---------- | --------- | ------ | -------- |
+| message_id | UUID      |        |          |
+| user_ID    | UUID      |        |          |
+| read_at    | TIMESTAMP |        |          |

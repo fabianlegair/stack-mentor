@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Track.md",
+                "file": "Define models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Track"
+              "title": "Define models"
             }
           }
         ],
@@ -186,10 +186,10 @@
   },
   "active": "b8efba3dd366aedf",
   "lastOpenFiles": [
-    "Stack.md",
     "Track.md",
-    "Architecture.md",
     "Define models.md",
+    "Stack.md",
+    "Architecture.md",
     "Define user flows.md",
     "Welcome.md"
   ]

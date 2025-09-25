@@ -48,16 +48,33 @@
             PRIMARY KEY (group_id, user_id)
             );
 
+            CREATE TABLE conversations (
+            conversation_id UUID PRIMARY KEY,
+            type varchar(10) CHECK (type IN ('private', 'group')) NOT NULL,
+            group_id UUID REFERENCES groups(group_id) ON DELETE CASCADE,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+
+            CREATE TABLE direct_conversation_participants (
+            conversation_id UUID REFERENCES conversations(conversation_id) ON DELETE CASCADE,
+            user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+            PRIMARY KEY (conversation_id, user_id)
+            );
+
             CREATE TABLE messages (
             message_id UUID PRIMARY KEY,
+            conversation_id UUID REFERENCES conversations(conversation_id) ON DELETE CASCADE,
             sender_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
-            receiver_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
-            group_id UUID REFERENCES groups(group_id) ON DELETE CASCADE,
             content TEXT NOT NULL,
             media_url VARCHAR(255),
-            sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            read_status BOOLEAN DEFAULT FALSE,
-            read_at TIMESTAMP
+            sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+
+            CREATE TABLE message_read_status (
+            message_id UUID REFERENCES messages(message_id) ON DELETE CASCADE,
+            user_id UUID REFERENCES users(user_id) ON DELETE CASCADE,
+            read_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (message_id, user_id)
             );
         </sql>
     </changeSet>

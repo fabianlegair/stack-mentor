@@ -20,9 +20,17 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.liquibase:liquibase-core")
     implementation("org.postgresql:postgresql")
+    implementation("org.projectlombok:lombok")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.junit.platform:junit-platform-launcher")
     testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.projectlombok:lombok")
+
+    annotationProcessor("org.projectlombok:lombok")
+
+    testAnnotationProcessor("org.projectlombok:lombok")
 }
 
 tasks.test {
@@ -31,6 +39,6 @@ tasks.test {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(23)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }

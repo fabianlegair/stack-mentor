@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="006" author="fabian-legair">
+        <sql>
+            -- Direct conversation between user 1 and user 2
+            INSERT INTO direct_conversation_participants (
+            conversation_id, user_id
+            ) VALUES
+            (
+            '880e8400-e29b-41d4-a716-446655440001',
+            '550e8400-e29b-41d4-a716-446655440001'
+            ),
+            (
+            '880e8400-e29b-41d4-a716-446655440001',
+            '550e8400-e29b-41d4-a716-446655440002'
+            );
+
+            -- Direct conversation between user 2 and user 3
+            INSERT INTO direct_conversation_participants (
+            conversation_id, user_id
+            ) VALUES
+            (
+            '880e8400-e29b-41d4-a716-446655440002',
+            '550e8400-e29b-41d4-a716-446655440002'
+            ),
+            (
+            '880e8400-e29b-41d4-a716-446655440002',
+            '550e8400-e29b-41d4-a716-446655440003'
+            );
+
+            -- Direct conversation between user 1 and user 4
+            INSERT INTO direct_conversation_participants (
+            conversation_id, user_id
+            ) VALUES
+            (
+            '880e8400-e29b-41d4-a716-446655440003',
+            '550e8400-e29b-41d4-a716-446655440001'
+            ),
+            (
+            '880e8400-e29b-41d4-a716-446655440003',
+            '550e8400-e29b-41d4-a716-446655440004'
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
