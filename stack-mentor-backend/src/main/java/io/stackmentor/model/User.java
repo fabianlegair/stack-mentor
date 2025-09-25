@@ -95,6 +95,9 @@ public class User {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    @Column(name = "is_verified", nullable = false)
+    private boolean isVerified = false;
+
     // Method to calculate age from dateOfBirth
     public int calculateAge() {
         return Period.between(dateOfBirth, LocalDate.now()).getYears();

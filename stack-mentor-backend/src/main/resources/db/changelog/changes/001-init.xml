@@ -28,7 +28,8 @@
             industry VARCHAR(100),
             skills TEXT,
             interests TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            is_verified BOOLEAN DEFAULT FALSE
             );
 
             CREATE TABLE groups (

@@ -50,3 +50,23 @@ Built out main skeleton
 
 Got the database to run in the docker container
 Got Spring to run in the container
+
+Completed JPA Entities and Repositories 
+	Model
+		Conversation
+		DirectConversationParticipant
+		DirectConversationParticipantId
+		Group
+		GroupMember
+		GroupMemberId
+		Message
+		MessageReadStatus
+		MessageReadStatusId
+		User
+	Repository
+		ConversationRepository
+		GroupMemberRepository
+		GroupRepository
+		MessageReadStatusRepository
+		MessageRepository
+		UserRepository
