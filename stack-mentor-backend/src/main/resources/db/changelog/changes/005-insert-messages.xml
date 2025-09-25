@@ -14,34 +14,44 @@
             '550e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440002',
             NULL,
-            'Hi Michael! I saw your profile and would love to connect. As a fellow tech enthusiast, I think we could
-            share some great insights!',
-            NULL, NOW(), FALSE, NULL
+            'Hi Michael! I saw your profile and would love to connect. As a fellow tech enthusiast, I think we could share some great insights!',
+            NULL,
+            NOW(),
+            FALSE,
+            NULL
             ),
             (
             '770e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440001',
             NULL,
-            'Hello Jane! Thanks for reaching out. I''m excited to connect with someone experienced in the tech industry.
-            Looking forward to learning from you!',
-            NULL, NOW(), FALSE, NULL
+            'Hello Jane! Thanks for reaching out. I''m excited to connect with someone experienced in the tech industry. Looking forward to learning from you!',
+            NULL,
+            NOW(),
+            FALSE,
+            NULL
             ),
             (
             '770e8400-e29b-41d4-a716-446655440003',
-            '550e8400-e29b-41d4-a716-446655440003', NULL,
+            '550e8400-e29b-41d4-a716-446655440003',
+            NULL,
             '660e8400-e29b-41d4-a716-446655440001',
-            'Hey everyone! Just wanted to introduce myself. I''m Sofia, a UX designer with a passion for creating
-            intuitive user experiences. Excited to be part of this group!',
-            NULL, NOW(), FALSE, NULL
+            'Hey everyone! Just wanted to introduce myself. I''m Sofia, a UX designer with a passion for creating intuitive user experiences. Excited to be part of this group!',
+            NULL,
+            NOW(),
+            FALSE,
+            NULL
             ),
             (
             '770e8400-e29b-41d4-a716-446655440004',
-            '550e8400-e29b-41d4-a716-446655440004', NULL,
+            '550e8400-e29b-41d4-a716-446655440004',
+            NULL,
             '660e8400-e29b-41d4-a716-446655440001',
-            'Welcome Sofia! It''s great to have you here. Your expertise in UX design will be a valuable addition to our
-            community. Looking forward to collaborating with you!',
-            NULL, NOW(), FALSE, NULL
+            'Welcome Sofia! It''s great to have you here. Your expertise in UX design will be a valuable addition to our community. Looking forward to collaborating with you!',
+            NULL,
+            NOW(),
+            FALSE,
+            NULL
             );
         </sql>
     </changeSet>
