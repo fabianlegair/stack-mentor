@@ -1,5 +1,6 @@
 package io.stackmentor.model;
 
+import io.stackmentor.enums.RoleType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Past;
@@ -70,11 +71,9 @@ public class User {
     @Column(name = "bio", columnDefinition = "TEXT")
     private String bio;
 
-    @Column(name = "mentor_status")
-    private boolean mentorStatus;
-
-    @Column(name = "mentee_status")
-    private boolean menteeStatus;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private RoleType role;
 
     @Column(name = "job_title", length = 100)
     private String jobTitle;
@@ -101,5 +100,9 @@ public class User {
     // Method to calculate age from dateOfBirth
     public int calculateAge() {
         return Period.between(dateOfBirth, LocalDate.now()).getYears();
+    }
+
+    public Object getName() {
+        return firstName + " " + lastName;
     }
 }

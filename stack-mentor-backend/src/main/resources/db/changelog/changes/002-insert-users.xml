@@ -9,7 +9,7 @@
 
             INSERT INTO users (
             user_id, username, email, phone_number, password_hash, first_name, last_name, date_of_birth,
-            city, state, age, profile_picture_url, bio, mentor_status, mentee_status,
+            city, state, age, profile_picture_url, bio, role,
             job_title, years_of_experience, industry, skills, interests, created_at, is_verified
             ) VALUES
             (
@@ -26,8 +26,7 @@
             35,
             'https://example.com/profiles/jane.jpg',
             'Full-stack engineer passionate about mentoring women in tech.',
-            TRUE,
-            FALSE,
+            'mentor',
             'Senior Software Engineer',
             12,
             'Technology',
@@ -50,8 +49,7 @@
             22,
             'https://example.com/profiles/michael.png',
             'Business student eager to connect with mentors in tech startups.',
-            FALSE,
-            TRUE,
+            'mentee',
             'Undergraduate Student',
             0,
             'Business',
@@ -74,8 +72,7 @@
             40,
             'https://example.com/profiles/sofia.png',
             'Creative director who loves helping juniors break into UX design.',
-            TRUE,
-            TRUE,
+            'mentor',
             'Creative Director',
             18,
             'Design',
@@ -98,8 +95,7 @@
             30,
             'https://example.com/profiles/raj.jpeg',
             'Data scientist passionate about AI, finance, and mentorship.',
-            TRUE,
-            FALSE,
+            'mentor',
             'Data Scientist',
             7,
             'Finance',

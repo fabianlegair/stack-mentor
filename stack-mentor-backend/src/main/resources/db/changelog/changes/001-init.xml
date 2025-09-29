@@ -21,8 +21,7 @@
             age INT,
             profile_picture_url VARCHAR(255),
             bio TEXT,
-            mentor_status BOOLEAN DEFAULT FALSE,
-            mentee_status BOOLEAN DEFAULT FALSE,
+            role varchar(10) CHECK (role IN ('mentor', 'mentee')) NOT NULL,
             job_title VARCHAR(100),
             years_of_experience INT,
             industry VARCHAR(100),
@@ -77,6 +76,18 @@
             read_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (message_id, user_id)
             );
+
+            CREATE TABLE verification_tokens (
+            token_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+            token VARCHAR(255) NOT NULL,
+            user_id UUID UNIQUE NOT NULL,
+            expiry_date TIMESTAMP NOT NULL,
+            CONSTRAINT fk_user
+            FOREIGN KEY(user_id)
+            REFERENCES users(user_id)
+            ON DELETE CASCADE
+            );
+
         </sql>
     </changeSet>
 </databaseChangeLog>
