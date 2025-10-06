@@ -1,5 +1,6 @@
 package io.stackmentor.service;
 
+import io.stackmentor.enums.RoleType;
 import io.stackmentor.model.User;
 import io.stackmentor.model.VerificationToken;
 import io.stackmentor.repository.UserRepository;
@@ -27,15 +28,45 @@ public class UserService {
         this.emailService = emailService;
     }
 
-    public User registerUser(String email, String rawPassword) {
+    public User registerUser(RoleType role, Integer yearsOfExperience, List<String> skillsOrInterests,
+                             String name, String city, String state,
+                             String gender, String email, String rawPassword) {
         // Business logic for registering a user
         // e.g., hashing password, validating data, etc.
         if (userRepository.existsByEmail(email)) {
             throw new IllegalArgumentException("Email already in use");
         }
+        // Split name
+        if (!name.trim().contains(" ")) {
+            throw new IllegalArgumentException("Only  include your first and last name, separated by a space");
+        }
+        String[] parts = name.split("\\s+");
+        if (parts.length > 2) {
+            throw new IllegalArgumentException("Full name must not include middle names");
+        }
+        String firstNamePart = parts[0];
+        String lastNamePart = parts[1];
 
         String hashedPassword = BCrypt.hashpw(rawPassword, BCrypt.gensalt());
         User newUser = new User();
+
+        // Set role-specific fields
+        if (role == RoleType.MENTOR) {
+            newUser.setRole(RoleType.MENTOR);
+            String skills = String.join(",", skillsOrInterests);
+            newUser.setSkills(skills);
+        } else {
+            newUser.setRole(RoleType.MENTEE);
+            String interests = String.join(",", skillsOrInterests);
+            newUser.setInterests(interests);
+        }
+
+        newUser.setYearsOfExperience(yearsOfExperience);
+        newUser.setFirstName(firstNamePart);
+        newUser.setLastName(lastNamePart);
+        newUser.setCity(city);
+        newUser.setState(state);
+        newUser.setGender(gender);
         newUser.setEmail(email);
         newUser.setPasswordHash(hashedPassword);
         newUser.setVerified(false);
@@ -59,7 +90,7 @@ public class UserService {
         // Implement search logic using specifications or custom queries
         // For simplicity, returning all users here
 
-        //Trim searth text
+        //Trim search text
         String trimmedSearchText = (searchText != null) ? searchText.trim() : null;
 
         // Parse experienceRange

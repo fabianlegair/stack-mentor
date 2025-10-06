@@ -31,10 +31,6 @@ public class User {
     @Column(name = "user_id", updatable = false, nullable = false)
     private UUID userId;
 
-    @Size(min = 3, max = 16)
-    @Column(name = "username", nullable = false, unique = true, length = 16)
-    private String username;
-
     @Email(message = "Please provide a valid email address")
     @Column(name = "email", nullable = false, unique = true, length = 100)
     private String email;
@@ -62,6 +58,12 @@ public class User {
 
     @Column(name = "state", length = 2)
     private String state;
+
+    @Column(name = "zip_code", length = 10)
+    private String zipCode;
+
+    @Column(name = "gender", length = 11)
+    private String gender;
 
     @Column(name = "age")
     private Integer age;

@@ -9,7 +9,6 @@
 
             CREATE TABLE users (
             user_id UUID PRIMARY KEY,
-            username VARCHAR(16) UNIQUE NOT NULL,
             email VARCHAR(100) UNIQUE NOT NULL,
             phone_number VARCHAR(15) UNIQUE,
             password_hash VARCHAR(255) NOT NULL,
@@ -18,6 +17,8 @@
             date_of_birth DATE,
             city VARCHAR(50),
             state VARCHAR(2),
+            zip_code VARCHAR(10),
+            gender VARCHAR(11),
             age INT,
             profile_picture_url VARCHAR(255),
             bio TEXT,

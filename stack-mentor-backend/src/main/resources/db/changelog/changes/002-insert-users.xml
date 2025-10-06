@@ -8,21 +8,22 @@
         <sql>
 
             INSERT INTO users (
-            user_id, username, email, phone_number, password_hash, first_name, last_name, date_of_birth,
-            city, state, age, profile_picture_url, bio, role,
+            user_id, email, phone_number, password_hash, first_name, last_name, date_of_birth,
+            city, state, zip_code, gender, age, profile_picture_url, bio, role,
             job_title, years_of_experience, industry, skills, interests, created_at, position, is_verified
             ) VALUES
             (
             '550e8400-e29b-41d4-a716-446655440000',
-            'master_admin',
             'admin@admin.com',
             '+1234567890',
             '$2b$12$1234567890abcdefghijklmnoqrstuv', -- bcrypt hash placeholder
             'Master',
             'Admin',
             '1980-01-01',
-            'New York',
+            'New York City',
             'NY',
+            '10010',
+            'Undisclosed',
             44,
             'https://example.com/profiles/admin.png',
             'The ultimate admin user with all the powers.',
@@ -38,7 +39,6 @@
             ),
             (
             '550e8400-e29b-41d4-a716-446655440001',
-            'tech_jane',
             'jane.doe@example.com',
             '+14155550123',
             '$2b$12$abcdefghijk1234567890lmnopqrstuv', -- bcrypt hash placeholder
@@ -47,6 +47,8 @@
             '1990-04-15',
             'San Francisco',
             'CA',
+            '94102',
+            'Female',
             35,
             'https://example.com/profiles/jane.jpg',
             'Full-stack engineer passionate about mentoring women in tech.',
@@ -62,7 +64,6 @@
             ),
             (
             '550e8400-e29b-41d4-a716-446655440002',
-            'future_ceo',
             'michael.lee@example.com',
             '+13105557890',
             '$2b$12$lmnopqrstuv1234567890abcdefghijk',
@@ -71,6 +72,8 @@
             '2002-11-30',
             'Chicago',
             'IL',
+            '60007',
+            'Male',
             22,
             'https://example.com/profiles/michael.png',
             'Business student eager to connect with mentors in tech startups.',
@@ -86,7 +89,6 @@
             ),
             (
             '550e8400-e29b-41d4-a716-446655440003',
-            'design_guru',
             'sofia.wang@example.com',
             '+12125554321',
             '$2b$12$uvwxyz1234567890abcdefghijklmno',
@@ -95,6 +97,8 @@
             '1985-07-09',
             'New York',
             'NY',
+            '10010',
+            'Male',
             40,
             'https://example.com/profiles/sofia.png',
             'Creative director who loves helping juniors break into UX design.',
@@ -110,7 +114,6 @@
             ),
             (
             '550e8400-e29b-41d4-a716-446655440004',
-            'data_ninja',
             'raj.patel@example.com',
             '+16175551234',
             '$2b$12$1234567890abcdefghijklmnopqrstuv',
@@ -119,6 +122,8 @@
             '1995-02-20',
             'Boston',
             'MA',
+            '02108',
+            'Male',
             30,
             'https://example.com/profiles/raj.jpeg',
             'Data scientist passionate about AI, finance, and mentorship.',

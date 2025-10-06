@@ -1,27 +1,30 @@
 **User Model**
 
-| Column              | Data Type    | Unique | Not Null |
-| ------------------- | ------------ | ------ | -------- |
-| user_id             | UUID         | ✓      | ✓        |
-| username            | VARCHAR(16)  | ✓      | ✓        |
-| email               | VARCHAR(100) | ✓      | ✓        |
-| phone_number        | VARCHAR(15)  | ✓      |          |
-| password_hash       | VARCHAR(255) |        | ✓        |
-| date_of_birth       | DATE         |        | ✓        |
-| city                | VARCHAR(26)  |        |          |
-| state               | VARCHAR(2)   |        |          |
-| age                 | INT          |        |          |
-| profile_picture_url | VARCHAR(255) |        |          |
-| bio                 | TEXT         |        |          |
-| role                | VARCHAR(10)  |        | ✓        |
-| job_title           | VARCHAR(100) |        |          |
-| years_of_experience | INT          |        |          |
-| industry            | VARCHAR(100) |        |          |
-| skills              | TEXT         |        |          |
-| interests           | TEXT         |        |          |
-| created_at          | TIMESTAMP    |        |          |
-| position            | VARCHAR(10)  |        |          |
-| is_verified         |              |        |          |
+| Column              | Data Type    | Unique | Not Null | During Signup |
+| ------------------- | ------------ | ------ | -------- | ------------- |
+| user_id             | UUID         | ✓      | ✓        |               |
+| email               | VARCHAR(100) | ✓      | ✓        | ✓             |
+| phone_number        | VARCHAR(15)  | ✓      |          |               |
+| password_hash       | VARCHAR(255) |        | ✓        | ✓             |
+| first_name          | VARCHAR(30)  |        | ✓        | ✓             |
+| last_name           | VARCHAR(30)  |        | ✓        | ✓             |
+| date_of_birth       | DATE         |        | ✓        | ✓             |
+| city                | VARCHAR(26)  |        |          | ✓             |
+| state               | VARCHAR(2)   |        |          | ✓             |
+| zip_code            | VARCHAR(10)  |        |          | ✓             |
+| gender              | VARCHAR(10)  |        |          | ✓             |
+| age                 | INT          |        |          |               |
+| profile_picture_url | VARCHAR(255) |        |          |               |
+| bio                 | TEXT         |        |          |               |
+| role                | VARCHAR(10)  |        | ✓        | ✓             |
+| job_title           | VARCHAR(100) |        |          | ✓             |
+| years_of_experience | INT          |        |          | ✓             |
+| industry            | VARCHAR(100) |        |          | ✓             |
+| skills              | TEXT         |        |          | ✓             |
+| interests           | TEXT         |        |          | ✓             |
+| created_at          | TIMESTAMP    |        |          |               |
+| position            | VARCHAR(10)  |        |          |               |
+| is_verified         | BOOLEAN      |        | ✓        |               |
 
 
 **Message Model**
