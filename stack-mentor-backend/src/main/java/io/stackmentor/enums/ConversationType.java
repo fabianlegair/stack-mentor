@@ -1,5 +1,8 @@
 package io.stackmentor.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum ConversationType {
 
     PRIVATE("private"),
@@ -9,9 +12,5 @@ public enum ConversationType {
 
     ConversationType(String value) {
         this.value = value;
-    }
-
-    public String getValue() {
-        return value;
     }
 }

@@ -13,14 +13,15 @@
 | age                 | INT          |        |          |
 | profile_picture_url | VARCHAR(255) |        |          |
 | bio                 | TEXT         |        |          |
-| mentor_status       | BOOLEAN      |        |          |
-| mentee_status       | BOOLEAN      |        |          |
+| role                | VARCHAR(10)  |        | ✓        |
 | job_title           | VARCHAR(100) |        |          |
 | years_of_experience | INT          |        |          |
 | industry            | VARCHAR(100) |        |          |
 | skills              | TEXT         |        |          |
 | interests           | TEXT         |        |          |
 | created_at          | TIMESTAMP    |        |          |
+| position            | VARCHAR(10)  |        |          |
+| is_verified         |              |        |          |
 
 
 **Message Model**

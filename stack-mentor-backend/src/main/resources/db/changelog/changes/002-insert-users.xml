@@ -10,8 +10,32 @@
             INSERT INTO users (
             user_id, username, email, phone_number, password_hash, first_name, last_name, date_of_birth,
             city, state, age, profile_picture_url, bio, role,
-            job_title, years_of_experience, industry, skills, interests, created_at, is_verified
+            job_title, years_of_experience, industry, skills, interests, created_at, position, is_verified
             ) VALUES
+            (
+            '550e8400-e29b-41d4-a716-446655440000',
+            'master_admin',
+            'admin@admin.com',
+            '+1234567890',
+            '$2b$12$1234567890abcdefghijklmnoqrstuv', -- bcrypt hash placeholder
+            'Master',
+            'Admin',
+            '1980-01-01',
+            'New York',
+            'NY',
+            44,
+            'https://example.com/profiles/admin.png',
+            'The ultimate admin user with all the powers.',
+            'mentor',
+            'Administrator',
+            20,
+            'Administration',
+            'Management, Leadership, Communication',
+            'Reading, traveling, technology',
+            NOW(),
+            'admin',
+            true
+            ),
             (
             '550e8400-e29b-41d4-a716-446655440001',
             'tech_jane',
@@ -33,6 +57,7 @@
             'Python, JavaScript, React, AWS',
             'Hiking, mentoring, open-source',
             NOW(),
+            'member',
             true
             ),
             (
@@ -56,6 +81,7 @@
             'Public Speaking, Excel, Market Research',
             'Startups, basketball, networking',
             NOW(),
+            'member',
             true
             ),
             (
@@ -79,6 +105,7 @@
             'UI/UX, Figma, Branding, Typography',
             'Art, traveling, teaching',
             NOW(),
+            'member',
             true
             ),
             (
@@ -102,6 +129,7 @@
             'Python, R, SQL, Machine Learning',
             'AI, fintech, chess',
             NOW(),
+            'moderator',
             true
             );
         </sql>

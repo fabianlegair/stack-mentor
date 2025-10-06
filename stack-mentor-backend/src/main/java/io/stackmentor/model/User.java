@@ -1,5 +1,6 @@
 package io.stackmentor.model;
 
+import io.stackmentor.enums.PositionType;
 import io.stackmentor.enums.RoleType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -93,6 +94,10 @@ public class User {
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "position", nullable = false)
+    private PositionType position;
 
     @Column(name = "is_verified", nullable = false)
     private boolean isVerified = false;

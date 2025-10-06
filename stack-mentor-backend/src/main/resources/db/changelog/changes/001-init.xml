@@ -28,6 +28,7 @@
             skills TEXT,
             interests TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            position VARCHAR(10) CHECK (position IN ('admin', 'moderator', 'member')) NOT NULL,
             is_verified BOOLEAN DEFAULT FALSE
             );
 
