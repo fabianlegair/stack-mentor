@@ -53,7 +53,7 @@ public class User {
     @Column(name = "date_of_birth", nullable = false)
     private LocalDate dateOfBirth;
 
-    @Column(name = "city", length = 26)
+    @Column(name = "city", length = 50)
     private String city;
 
     @Column(name = "state", length = 2)
@@ -99,7 +99,7 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "position", nullable = false)
-    private PositionType position;
+    private PositionType position = PositionType.MEMBER;
 
     @Column(name = "is_verified", nullable = false)
     private boolean isVerified = false;
