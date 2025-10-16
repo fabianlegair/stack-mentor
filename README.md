@@ -9,7 +9,7 @@ guidance.
 
 Here's a preview of the Login/Signup Flow:
 
-![Stack Mentor Mock-Up Image](https://github.com/fabianlegair/stack-mentor/blob/main/demo-images/StackMentor-Mockup.png?raw=true)
+![Stack Mentor Mock-Up Image](https://github.com/fabianlegair/stack-mentor/blob/main/demo-images/stack-mentor-mockup.png?raw=true)
 
 ## How It's Made:
 
