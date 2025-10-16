@@ -26,7 +26,7 @@ models/components I would need to make the application.
 
 For the frontend I wanted to minimalize the amount of 
 time spent coding, so I chose **React Native** as my 
-codebase. I chose React Native for the:
+language. I chose React Native for the:
 - Single codebase for iOS + Android compatibility
 - JavaScript ecosystem (npm packages, large userbase)
 - Performance speed
