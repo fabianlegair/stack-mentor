@@ -1,5 +1,6 @@
 package io.stackmentor.model;
 
+import io.stackmentor.enums.GroupMemberType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,8 +25,9 @@ public class GroupMember {
     @Column(name = "user_id", updatable = false, nullable = false)
     private UUID userId;
 
-    @Column(name = "role", length = 15) // e.g., "admin", "member"
-    private String role;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", length = 15, nullable = false) // e.g., "admin", "member"
+    private GroupMemberType role = GroupMemberType.MEMBER;
 
     @Column(name = "joined_at", nullable = false)
     private LocalDateTime joinedAt;

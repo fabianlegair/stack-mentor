@@ -93,10 +93,10 @@ public class UserService {
 
         // Set role-specific fields
         if (dto.getRole() == RoleType.MENTOR) {
-            String skills = String.join(",", dto.getSkillsOrInterests());
+            String skills = String.join(", ", dto.getSkillsOrInterests());
             userBuilder.skills(skills);
         } else {
-            String interests = String.join(",", dto.getSkillsOrInterests());
+            String interests = String.join(", ", dto.getSkillsOrInterests());
             userBuilder.interests(interests);
         }
 
