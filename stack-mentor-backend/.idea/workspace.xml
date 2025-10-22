@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/dto/RegisterUserDtoValidationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/specs/UserSpecifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/specification/UserSpecificationBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage.executor": "Run",
     "Gradle.RegisterUserDtoValidationTest.executor": "Run",
     "Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails.executor": "Run",
     "Gradle.RegisterUserDtoValidationTest.whenEmailIsBlank_validationFails.executor": "Run",
@@ -70,6 +71,9 @@
     "Gradle.UserServiceTest.registerUser_nameWithFewerPartsThrowsException.executor": "Run",
     "Gradle.UserServiceTest.registerUser_withInvalidNameThrowsException.executor": "Run",
     "Gradle.UserServiceTest.registerUser_withUsedEmailThrowsException.executor": "Run",
+    "Gradle.UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification.executor": "Run",
+    "Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange.executor": "Run",
+    "Gradle.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -81,7 +85,7 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage">
+  <component name="RunManager" selected="Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange">
     <configuration name="EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -96,78 +100,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;io.stackmentor.service.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterUserDtoValidationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,13 +134,85 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.searchUsers_parsesExperienceRangeWithPlus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" />
+        <item itemvalue="Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange" />
+        <item itemvalue="Gradle.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus" />
         <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.RegisterUserDtoValidationTest" />
-        <item itemvalue="Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails" />
-        <item itemvalue="Gradle.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails" />
+        <item itemvalue="Gradle.UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification" />
+        <item itemvalue="Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" />
       </list>
     </recent_temporary>
   </component>

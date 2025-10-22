@@ -8,7 +8,7 @@ import io.stackmentor.model.User;
 import io.stackmentor.model.VerificationToken;
 import io.stackmentor.repository.UserRepository;
 import io.stackmentor.repository.VerificationTokenRepository;
-import io.stackmentor.repository.specs.UserSpecifications;
+import io.stackmentor.specification.UserSpecificationBuilder;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
@@ -22,13 +22,16 @@ public class UserService {
     private final UserRepository userRepository;
     private final VerificationTokenRepository verificationTokenRepository;
     private final EmailService emailService;
+    private final UserSpecificationBuilder specBuilder;
 
     public UserService(UserRepository userRepository,
                        VerificationTokenRepository verificationTokenRepository,
-                       EmailService emailService) {
+                       EmailService emailService,
+                       UserSpecificationBuilder specBuilder) {
         this.userRepository = userRepository;
         this.verificationTokenRepository = verificationTokenRepository;
         this.emailService = emailService;
+        this.specBuilder = specBuilder;
     }
 
     private UserDto convertToDto(User user) {
@@ -144,7 +147,7 @@ public class UserService {
             throw new IllegalArgumentException("Invalid experience range format: " + experienceRange, e);
         }
 
-        Specification<User> specification = UserSpecifications.searchWithFilters(
+        Specification<User> specification = specBuilder.searchWithFilters(
                 trimmedSearchText, role, minExp, maxExp, industries);
 
         return userRepository.findAll(specification);

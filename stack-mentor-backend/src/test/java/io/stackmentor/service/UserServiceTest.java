@@ -6,11 +6,14 @@ import io.stackmentor.enums.RoleType;
 import io.stackmentor.model.User;
 import io.stackmentor.repository.UserRepository;
 import io.stackmentor.repository.VerificationTokenRepository;
+import io.stackmentor.specification.UserSpecificationBuilder;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.jpa.domain.Specification;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,6 +31,9 @@ public class UserServiceTest {
     private UserRepository userRepository;
 
     @Mock
+    private UserSpecificationBuilder specBuilder;
+
+    @Mock
     private VerificationTokenRepository verificationTokenRepository;
 
     @Mock
@@ -37,7 +43,7 @@ public class UserServiceTest {
     private UserService userService;
 
     @Test
-    public void registerUser_createsNewMentorSuccessfully() {
+    void registerUser_createsNewMentorSuccessfully() {
 
         //Arrange
         RegisterUserDto dto = new RegisterUserDto();
@@ -91,7 +97,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void registerUser_nameWithExtraPartsThrowsException() {
+    void registerUser_nameWithExtraPartsThrowsException() {
 
         // Arrange
         RegisterUserDto dto = new RegisterUserDto();
@@ -110,7 +116,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void registerUser_nameWithFewerPartsThrowsException() {
+    void registerUser_nameWithFewerPartsThrowsException() {
 
         // Arrange
         RegisterUserDto dto = new RegisterUserDto();
@@ -129,7 +135,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void registerUser_withUsedEmailThrowsException() {
+    void registerUser_withUsedEmailThrowsException() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setEmail("admin@admin.com");
 
@@ -143,5 +149,148 @@ public class UserServiceTest {
 
         assertEquals("Email already in use",
                 e.getMessage());
+    }
+
+    @Test
+    void searchUsers_callsSpecBuilderAndRepository() {
+        Specification<User> mockSpec = mock(Specification.class);
+        when(specBuilder.searchWithFilters(any(), any(), any(), any(), any())).thenReturn(mockSpec);
+        when(userRepository.findAll(mockSpec)).thenReturn(List.of());
+
+        userService.searchUsers(" Admin ", "MENTEE", "5+", List.of("Tech"));
+
+        verify(specBuilder).searchWithFilters(
+                eq("Admin"), eq("MENTEE"), eq(5), eq(null), eq(List.of("Tech"))
+        );
+        verify(userRepository).findAll(mockSpec);
+    }
+
+    @Test
+    void searchUsers_callsRepositoryWithCorrectSpecification() {
+
+        // Arrange
+        String searchText = " Master ";
+        String role = "MENTOR";
+        String experienceRange = "2-5";
+        List<String> industries = List.of("Tech", "Finance");
+
+        Specification<User> mockSpec = mock(Specification.class);
+        when(specBuilder.searchWithFilters(anyString(), anyString(), any(), any(), anyList()))
+                .thenReturn(mockSpec);
+        when(userRepository.findAll(eq(mockSpec))).thenReturn(List.of(new User(), new User()));
+
+        // Act
+        List<User> result = userService.searchUsers(searchText, role, experienceRange, industries);
+
+        // Assert
+        // Verify specBuilder called with trimmed text and correct experience range
+        verify(specBuilder).searchWithFilters(
+                eq("Master"),  // trimmed
+                eq(role),
+                eq(2),         // minExp
+                eq(5),         // maxExp
+                eq(industries)
+        );
+
+        // Verify repository is called with the specification returned from specBuilder
+        verify(userRepository).findAll(eq(mockSpec));
+        assertEquals(2, result.size());
+    }
+
+    @Test
+    void searchUsers_trimsSearchText() {
+
+        // Arrange
+        String searchText = "  Admin  ";
+        String role = "MENTEE";
+        String experienceRange = null;
+        List<String> industries = List.of();
+
+        Specification<User> mockSpec = mock(Specification.class);
+        when(specBuilder.searchWithFilters(anyString(), anyString(), any(), any(), anyList()))
+                .thenReturn(mockSpec);
+        when(userRepository.findAll(eq(mockSpec))).thenReturn(List.of());
+
+        // Act
+        userService.searchUsers(searchText, role, experienceRange, industries);
+
+        // Assert
+        verify(specBuilder).searchWithFilters(
+                eq("Admin"),   // trimmed
+                eq(role),
+                eq(null),
+                eq(null),
+                eq(industries)
+        );
+
+        verify(userRepository).findAll(eq(mockSpec));
+    }
+
+    @Test
+    void searchUsers_parsesExperienceRangeWithPlus() {
+
+        // Arrange
+        String searchText = "  Admin  ";
+        String role = "MENTEE";
+        String experienceRange = "10+";
+        List<String> industries = List.of();
+
+        Specification<User> mockSpec = mock(Specification.class);
+        when(specBuilder.searchWithFilters(anyString(), anyString(), any(), any(), anyList()))
+                .thenReturn(mockSpec);
+        when(userRepository.findAll(eq(mockSpec))).thenReturn(List.of());
+
+        // Act
+        userService.searchUsers(searchText, role, experienceRange, industries);
+
+        // Assert --
+        verify(specBuilder).searchWithFilters(
+                eq("Admin"),
+                eq(role),
+                eq(10),    // minExp parsed correctly
+                eq(null),  // maxExp is null for "10+"
+                eq(industries)
+        );
+
+        verify(userRepository).findAll(eq(mockSpec));
+    }
+
+    @Test
+    void searchUsers_throwsExceptionForInvalidExperienceRange() {
+        // Arrange
+        String invalidRange = "abc-xyz";
+
+        // Act + Assert
+        assertThrows(IllegalArgumentException.class, () ->
+                userService.searchUsers("Master", "MENTOR", invalidRange, null)
+        );
+    }
+
+    @Test
+    void searchUsers_callsUserSpecificationsWithParsedExperienceRange() {
+        // Arrange
+        String searchText = " Master ";
+        String role = "MENTOR";
+        String experienceRange = "3-7";
+        List<String> industries = List.of("Tech", "Finance");
+
+        Specification<User> mockSpec = mock(Specification.class);
+        when(specBuilder.searchWithFilters(anyString(), anyString(), any(), any(), anyList()))
+                .thenReturn(mockSpec);
+        when(userRepository.findAll(eq(mockSpec))).thenReturn(List.of());
+
+        // Act
+        userService.searchUsers(searchText, role, experienceRange, industries);
+
+        // Assert
+        verify(specBuilder).searchWithFilters(
+                eq("Master"), // trimmed
+                eq(role),
+                eq(3),        // minExp
+                eq(7),        // maxExp
+                eq(industries)
+        );
+
+        verify(userRepository).findAll(eq(mockSpec));
     }
 }

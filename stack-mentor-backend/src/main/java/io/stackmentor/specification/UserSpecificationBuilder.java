@@ -1,20 +1,22 @@
-package io.stackmentor.repository.specs;
+package io.stackmentor.specification;
 
 import io.stackmentor.model.User;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-public class UserSpecifications {
+@Component
+public class UserSpecificationBuilder {
 
     // Base specification -- Verified users only
-    public static Specification<User> isVerified() {
+    public Specification<User> isVerified() {
         return (root, query, criteriaBuilder) ->
                 criteriaBuilder.isTrue(root.get("isVerified"));
     }
 
     //Partial match for first name
-    public static Specification<User> firstNameContains(String firstName) {
+    public Specification<User> firstNameContains(String firstName) {
         return (root, query, criteriaBuilder) -> {
             if (firstName == null || firstName.trim().isEmpty()) return criteriaBuilder.conjunction();
             return criteriaBuilder.like(
@@ -24,7 +26,7 @@ public class UserSpecifications {
     }
 
     //Partial match for last name
-    public static Specification<User> lastNameContains(String lastName) {
+    public Specification<User> lastNameContains(String lastName) {
         return (root, query, criteriaBuilder) -> {
             if (lastName == null || lastName.trim().isEmpty()) return criteriaBuilder.conjunction();
             return criteriaBuilder.like(
@@ -34,7 +36,7 @@ public class UserSpecifications {
     }
 
     //Search by whole name or partial
-    public static Specification<User> nameContains(String name) {
+    public Specification<User> nameContains(String name) {
         return (root, query, criteriaBuilder) -> {
             if (name == null || name.trim().isEmpty()) return criteriaBuilder.conjunction();
 
@@ -63,7 +65,7 @@ public class UserSpecifications {
     }
 
     //Role match
-    public static Specification<User> hasRole(String role) {
+    public Specification<User> hasRole(String role) {
         return (root, query, criteriaBuilder) -> {
             if (role == null || role.trim().isEmpty()) return criteriaBuilder.conjunction();
             return criteriaBuilder.equal(criteriaBuilder.lower(root.get("role")), role.toLowerCase());
@@ -71,7 +73,7 @@ public class UserSpecifications {
     }
 
     //Experience range match
-    public static Specification<User> experienceInRange(Integer minYears, Integer maxYears) {
+    public Specification<User> experienceInRange(Integer minYears, Integer maxYears) {
         return (root, query, criteriaBuilder) -> {
             if (minYears == null && maxYears == null) return criteriaBuilder.conjunction();
             if (minYears != null && maxYears != null) {
@@ -86,7 +88,7 @@ public class UserSpecifications {
     }
 
     //Filter by multiple industries
-    public static Specification<User> hasIndustries(List<String> industries) {
+    public Specification<User> hasIndustries(List<String> industries) {
         return (root, query, criteriaBuilder) -> {
             if (industries == null || industries.isEmpty()) return criteriaBuilder.conjunction();
 
@@ -98,7 +100,7 @@ public class UserSpecifications {
     }
 
     // Combined search specification for multiple filters
-    public static Specification<User> searchWithFilters(
+    public Specification<User> searchWithFilters(
             String searchText,
             String role,
             Integer minYears,
