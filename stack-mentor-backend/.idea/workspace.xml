@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/RegisterUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/RegisterUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/dto.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/exception/exception.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/util/util.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/DemoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/StackMentorBackendApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\legai\.gradle\wrapper\dists\gradle-8.14-bin\38aieal9i53h9rfe7vjup95b9\gradle-8.14" javaHome="C:\Program Files\Amazon Corretto\jdk23.0.2_7" gradleVersion="8.14" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="34OghRtF88YwbAjl4JZncCUzrF5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="UserServiceTest.registerUser_createsNewMentorSuccessfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.UserServiceTest.registerUser_createsNewMentorSuccessfully&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="" />
+      <created>1742721288902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742721288902</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,4 +1,4 @@
-package io.stackmentor.service;
-
-public class EmailServiceTest {
-}
+//package io.stackmentor.service;
+//
+//public class EmailServiceTest {
+//}

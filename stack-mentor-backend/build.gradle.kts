@@ -19,20 +19,27 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-websocket")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("jakarta.validation:jakarta.validation-api")
     implementation("org.liquibase:liquibase-core")
     implementation("org.postgresql:postgresql")
-    implementation("org.projectlombok:lombok")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.testcontainers:junit-jupiter")
-    testImplementation("org.junit.platform:junit-platform-launcher")
-    testImplementation("org.testcontainers:postgresql")
-    testImplementation("org.projectlombok:lombok")
-
+    // Lombok
+    compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
 
+    // Test dependencies
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+    }
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    // Lombok tests
+    testCompileOnly("org.projectlombok:lombok")
     testAnnotationProcessor("org.projectlombok:lombok")
 }
+
 
 tasks.test {
     useJUnitPlatform()

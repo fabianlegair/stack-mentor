@@ -1,7 +1,6 @@
 package io.stackmentor.dto;
 
 import io.stackmentor.enums.RoleType;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

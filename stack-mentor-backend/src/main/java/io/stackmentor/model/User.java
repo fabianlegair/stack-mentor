@@ -99,10 +99,10 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "position", nullable = false)
-    private PositionType position = PositionType.MEMBER;
+    private PositionType position;
 
     @Column(name = "is_verified", nullable = false)
-    private boolean isVerified = false;
+    private boolean isVerified;
 
     // Method to calculate age from dateOfBirth
     public int calculateAge() {

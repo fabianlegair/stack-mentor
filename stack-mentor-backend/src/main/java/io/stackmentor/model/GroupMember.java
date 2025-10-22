@@ -27,7 +27,7 @@ public class GroupMember {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "role", length = 15, nullable = false) // e.g., "admin", "member"
-    private GroupMemberType role = GroupMemberType.MEMBER;
+    private GroupMemberType role;
 
     @Column(name = "joined_at", nullable = false)
     private LocalDateTime joinedAt;
