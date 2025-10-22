@@ -14,7 +14,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,7 +52,7 @@ public class UserServiceTest {
         dto.setState("OH");
 
         // Mock user to be returned after save
-        UUID userId = UUID.randomUUID() ;
+        UUID userId = UUID.randomUUID();
         User savedUser = new User();
         savedUser.setUserId(userId);
         savedUser.setFirstName("Master");
@@ -89,5 +88,60 @@ public class UserServiceTest {
         // Verify interactions
         verify(userRepository).existsByEmail("admin@admin.com");
         verify(userRepository).save(any(User.class));
+    }
+
+    @Test
+    public void registerUser_nameWithExtraPartsThrowsException() {
+
+        // Arrange
+        RegisterUserDto dto = new RegisterUserDto();
+        dto.setName("Master Ad Min");
+
+        when(userRepository.existsByEmail(dto.getEmail())).thenReturn(false);
+
+        //Act & Assert
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class,
+                () -> userService.registerUser(dto)
+        );
+
+        assertEquals("Full name must not include middle names",
+                e.getMessage());
+    }
+
+    @Test
+    public void registerUser_nameWithFewerPartsThrowsException() {
+
+        // Arrange
+        RegisterUserDto dto = new RegisterUserDto();
+        dto.setName("MasterAdmin");
+
+        when(userRepository.existsByEmail(dto.getEmail())).thenReturn(false);
+
+        //Act & Assert
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class,
+                () -> userService.registerUser(dto)
+        );
+
+        assertEquals("Only  include your first and last name, separated by a space",
+                e.getMessage());
+    }
+
+    @Test
+    public void registerUser_withUsedEmailThrowsException() {
+        RegisterUserDto dto = new RegisterUserDto();
+        dto.setEmail("admin@admin.com");
+
+        when(userRepository.existsByEmail(dto.getEmail())).thenReturn(true);
+
+        //Act & Assert
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class,
+                () -> userService.registerUser(dto)
+        );
+
+        assertEquals("Email already in use",
+                e.getMessage());
     }
 }

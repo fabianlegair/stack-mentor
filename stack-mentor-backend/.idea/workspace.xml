@@ -5,31 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/RegisterUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/RegisterUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/dto.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/exception/exception.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/util/util.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/DemoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/StackMentorBackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/dto/RegisterUserDtoValidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +23,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -52,6 +34,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -68,7 +57,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.RegisterUserDtoValidationTest.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenEmailIsBlank_validationFails.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenEmailIsInvalid_validationFails.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenNameIsBlank_validationFails.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenPasswordIsBlank_validationFails.executor": "Run",
+    "Gradle.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails.executor": "Run",
+    "Gradle.UserServiceTest.executor": "Run",
     "Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully.executor": "Run",
+    "Gradle.UserServiceTest.registerUser_nameWithExtraPartsThrowsException.executor": "Run",
+    "Gradle.UserServiceTest.registerUser_nameWithFewerPartsThrowsException.executor": "Run",
+    "Gradle.UserServiceTest.registerUser_withInvalidNameThrowsException.executor": "Run",
+    "Gradle.UserServiceTest.registerUser_withUsedEmailThrowsException.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -80,8 +81,8 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="UserServiceTest.registerUser_createsNewMentorSuccessfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage">
+    <configuration name="EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +95,103 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;io.stackmentor.service.UserServiceTest.registerUser_createsNewMentorSuccessfully&quot;" />
+            <option value="&quot;io.stackmentor.service.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterUserDtoValidationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.dto.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.UserServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -107,10 +204,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully" />
+        <item itemvalue="Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" />
+        <item itemvalue="Gradle.UserServiceTest" />
+        <item itemvalue="Gradle.RegisterUserDtoValidationTest" />
+        <item itemvalue="Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails" />
+        <item itemvalue="Gradle.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="" />
