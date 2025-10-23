@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/CreateGroupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/GroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/specs/UserSpecifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/specification/UserSpecificationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,37 +54,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenEmailIsBlank_validationFails.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenEmailIsInvalid_validationFails.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenNameIsBlank_validationFails.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenPasswordIsBlank_validationFails.executor": "Run",
-    "Gradle.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails.executor": "Run",
-    "Gradle.UserServiceTest.executor": "Run",
-    "Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully.executor": "Run",
-    "Gradle.UserServiceTest.registerUser_nameWithExtraPartsThrowsException.executor": "Run",
-    "Gradle.UserServiceTest.registerUser_nameWithFewerPartsThrowsException.executor": "Run",
-    "Gradle.UserServiceTest.registerUser_withInvalidNameThrowsException.executor": "Run",
-    "Gradle.UserServiceTest.registerUser_withUsedEmailThrowsException.executor": "Run",
-    "Gradle.UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification.executor": "Run",
-    "Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange.executor": "Run",
-    "Gradle.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenDateOfBirthIsInPast_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenEmailIsBlank_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenEmailIsInvalid_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenNameIsBlank_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenPasswordIsBlank_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegisterUserDtoValidationTest.whenPasswordIsTooShort_validationFails.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.registerUser_createsNewMentorSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.registerUser_nameWithExtraPartsThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.registerUser_nameWithFewerPartsThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.registerUser_withInvalidNameThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.registerUser_withUsedEmailThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.searchUsers_callsRepositoryWithCorrectSpecification.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange">
     <configuration name="EmailServiceTest.sendVerificationEmail_sendsCorrectMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
