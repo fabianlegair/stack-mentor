@@ -20,7 +20,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenNameIsBlank_validationFails() {
+    void whenNameIsBlank_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setName("");
 
@@ -34,7 +34,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenEmailIsBlank_validationFails() {
+    void whenEmailIsBlank_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setEmail("");
 
@@ -48,7 +48,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenEmailIsInvalid_validationFails() {
+    void whenEmailIsInvalid_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setEmail("admin,com");
 
@@ -62,7 +62,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenPasswordIsBlank_validationFails() {
+    void whenPasswordIsBlank_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setPassword("");
 
@@ -76,7 +76,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenPasswordIsTooShort_validationFails() {
+    void whenPasswordIsTooShort_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setPassword("1234567");
 
@@ -90,7 +90,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenDateOfBirthIsNull_validationFails() {
+    void whenDateOfBirthIsNull_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setDateOfBirth(null);
 
@@ -104,7 +104,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenDateOfBirthIsInPast_validationFails() {
+    void whenDateOfBirthIsInPast_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setDateOfBirth(LocalDate.of(2030, 1, 1));
 
@@ -118,7 +118,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenRoleIsNull_validationFails() {
+    void whenRoleIsNull_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setRole(null);
 
@@ -132,7 +132,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenCityIsNull_validationFails() {
+    void whenCityIsNull_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setCity("");
 
@@ -146,7 +146,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenStateIsNull_validationFails() {
+    void whenStateIsNull_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setState("");
 
@@ -160,7 +160,7 @@ public class RegisterUserDtoValidationTest {
     }
 
     @Test
-    public void whenStateIsTooLong_validationFails() {
+    void whenStateIsTooLong_validationFails() {
         RegisterUserDto dto = new RegisterUserDto();
         dto.setState("");
 

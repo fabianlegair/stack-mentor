@@ -7,31 +7,28 @@
     <changeSet id="003" author="fabian-legair">
         <sql>
             INSERT INTO groups (
-            group_id, group_name, description, created_by, created_at, members
+            group_id, group_name, description, created_by, created_at
             ) VALUES
             (
             '660e8400-e29b-41d4-a716-446655440001',
             'StackMentors',
             'A group for tech professionals to share knowledge and mentor each other.',
             '550e8400-e29b-41d4-a716-446655440003',
-            NOW(),
-            '550e8400-e29b-41d4-a716-446655440004, 550e8400-e29b-41d4-a716-446655440003, 550e8400-e29b-41d4-a716-446655440002, 550e8400-e29b-41d4-a716-446655440001'
+            NOW()
             ),
             (
             '660e8400-e29b-41d4-a716-446655440002',
             'BusinessConnect',
             'Connecting business students with industry mentors for career growth.',
             '550e8400-e29b-41d4-a716-446655440002',
-            NOW(),
-            '550e8400-e29b-41d4-a716-446655440002, 550e8400-e29b-41d4-a716-446655440004'
+            NOW()
             ),
             (
             '660e8400-e29b-41d4-a716-446655440003',
             'DesignPros',
             'A community for designers to collaborate, share resources, and find mentorship.',
             '550e8400-e29b-41d4-a716-446655440003',
-            NOW(),
-            '550e8400-e29b-41d4-a716-446655440003, 550e8400-e29b-41d4-a716-446655440001'
+            NOW()
             );
         </sql>
     </changeSet>

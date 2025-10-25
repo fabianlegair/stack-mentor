@@ -18,12 +18,14 @@ import java.util.UUID;
 public class GroupMember {
     // Model
     @Id
-    @Column(name = "group_id", updatable = false, nullable = false)
-    private UUID groupId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "group_id", nullable = false)
+    private Group group;
 
     @Id
-    @Column(name = "user_id", updatable = false, nullable = false)
-    private UUID userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "role", length = 15, nullable = false) // e.g., "admin", "member"
@@ -32,3 +34,4 @@ public class GroupMember {
     @Column(name = "joined_at", nullable = false)
     private LocalDateTime joinedAt;
 }
+

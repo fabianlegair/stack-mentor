@@ -24,7 +24,7 @@ public class EmailServiceTest {
     private EmailService emailService;
 
     @Test
-    public void sendVerificationEmail_sendsCorrectMessage() {
+    void sendVerificationEmail_sendsCorrectMessage() {
 
         String recipient = "admin@admin.com";
         String token = "12345678";

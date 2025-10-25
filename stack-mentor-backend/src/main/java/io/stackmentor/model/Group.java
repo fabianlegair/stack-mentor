@@ -34,7 +34,4 @@ public class Group {
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
-
-    @Column(name = "members", columnDefinition = "TEXT") //A List of User IDs or a separate GroupMember entity could be used for better normalization
-    private String members; // Comma-separated list of user IDs for simplicity
 }
