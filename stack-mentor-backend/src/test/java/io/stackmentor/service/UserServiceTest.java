@@ -1,7 +1,7 @@
 package io.stackmentor.service;
 
-import io.stackmentor.dto.RegisterUserDto;
-import io.stackmentor.dto.UserDto;
+import io.stackmentor.dto.user.RegisterUserDto;
+import io.stackmentor.dto.user.UserDto;
 import io.stackmentor.enums.RoleType;
 import io.stackmentor.model.User;
 import io.stackmentor.repository.UserRepository;

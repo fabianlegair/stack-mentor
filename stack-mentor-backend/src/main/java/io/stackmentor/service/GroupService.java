@@ -1,7 +1,7 @@
 package io.stackmentor.service;
 
-import io.stackmentor.dto.GroupDto;
-import io.stackmentor.dto.GroupMemberDto;
+import io.stackmentor.dto.group.GroupDto;
+import io.stackmentor.dto.group.GroupMemberDto;
 import io.stackmentor.enums.GroupMemberType;
 import io.stackmentor.model.Group;
 import io.stackmentor.model.GroupMember;
@@ -10,6 +10,7 @@ import io.stackmentor.repository.GroupMemberRepository;
 import io.stackmentor.repository.GroupRepository;
 import io.stackmentor.repository.UserRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -19,17 +20,16 @@ import java.util.UUID;
 @Service
 public class GroupService {
 
-    private final GroupRepository groupRepository;
-    private final GroupMemberRepository groupMemberRepository;
-    private final UserRepository userRepository;
 
-    public GroupService(GroupRepository groupRepository,
-                        GroupMemberRepository groupMemberRepository,
-                        UserRepository userRepository) {
-        this.groupRepository = groupRepository;
-        this.groupMemberRepository = groupMemberRepository;
-        this.userRepository = userRepository;
-    }
+    @Autowired
+    private GroupRepository groupRepository;
+
+    @Autowired
+    private GroupMemberRepository groupMemberRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     @Transactional
     public GroupDto createGroup(GroupDto dto,

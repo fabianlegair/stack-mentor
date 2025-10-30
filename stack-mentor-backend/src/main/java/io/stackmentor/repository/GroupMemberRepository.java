@@ -3,6 +3,8 @@ package io.stackmentor.repository;
 import io.stackmentor.model.GroupMember;
 import io.stackmentor.model.GroupMemberId;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,4 +16,10 @@ public interface GroupMemberRepository extends JpaRepository<GroupMember, GroupM
     List<GroupMember> findByGroup_GroupId(UUID groupId);
     void deleteByGroup_GroupIdAndUser_UserId(UUID groupId, UUID userId);
     boolean existsByGroup_GroupIdAndUser_UserId(UUID groupId, UUID userId);
+
+    @Query("SELECT g.conversation.conversationId " +
+            "FROM GroupMember gm " +
+            "JOIN gm.group g " +
+            "WHERE gm.user.userId = :userId")
+    List<UUID> findGroupsConversationIdByUser_UserId(@Param("userId") UUID userId);
 }

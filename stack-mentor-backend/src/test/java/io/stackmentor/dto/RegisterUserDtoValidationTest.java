@@ -1,5 +1,6 @@
 package io.stackmentor.dto;
 
+import io.stackmentor.dto.user.RegisterUserDto;
 import jakarta.validation.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

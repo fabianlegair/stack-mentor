@@ -6,104 +6,124 @@
 
     <changeSet id="007" author="fabian-legair">
         <sql>
-            -- Messages in StackMentors group (conversation_id: 770e8400-e29b-41d4-a716-446655440001)
+            -- Messages in StackMentors group
             INSERT INTO messages (
-            message_id, conversation_id, sender_id, content, media_url, sent_at
+            message_id, sender_id, content, media_url, sent_at, edited_at, is_deleted, deleted_at
             ) VALUES
             (
             '990e8400-e29b-41d4-a716-446655440001',
-            '770e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440003',
             'Welcome to StackMentors! Let''s start sharing knowledge and helping each other grow.',
             NULL,
-            NOW() - INTERVAL '2 hours'
+            NOW() - INTERVAL '2 hours',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440002',
-            '770e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440004',
             'Thanks for creating this group! I''m excited to connect with fellow developers.',
             NULL,
-            NOW() - INTERVAL '1 hour 30 minutes'
+            NOW() - INTERVAL '1 hour 30 minutes',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440003',
-            '770e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440001',
             'Does anyone have experience with microservices architecture? Looking for some guidance.',
             NULL,
-            NOW() - INTERVAL '45 minutes'
+            NOW() - INTERVAL '45 minutes',
+            NULL,
+            FALSE,
+            NULL
             );
 
-            -- Messages in BusinessConnect group (conversation_id: 770e8400-e29b-41d4-a716-446655440002)
+            -- Messages in BusinessConnect group
             INSERT INTO messages (
-            message_id, conversation_id, sender_id, content, media_url, sent_at
+            message_id, sender_id, content, media_url, sent_at, edited_at, is_deleted, deleted_at
             ) VALUES
             (
             '990e8400-e29b-41d4-a716-446655440004',
-            '770e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440002',
             'Welcome to BusinessConnect! This is where we bridge the gap between academia and industry.',
             NULL,
-            NOW() - INTERVAL '3 hours'
+            NOW() - INTERVAL '3 hours',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440005',
-            '770e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440004',
             'Great initiative! I''m looking forward to sharing my industry experience with students.',
             NULL,
-            NOW() - INTERVAL '2 hours 15 minutes'
+            NOW() - INTERVAL '2 hours 15 minutes',
+            NULL,
+            FALSE,
+            NULL
             );
 
-            -- Direct messages between user 1 and user 2 (conversation_id: 880e8400-e29b-41d4-a716-446655440001)
+            -- Direct messages between user 1 and user 2
             INSERT INTO messages (
-            message_id, conversation_id, sender_id, content, media_url, sent_at
+            message_id, sender_id, content, media_url, sent_at, edited_at, is_deleted, deleted_at
             ) VALUES
             (
             '990e8400-e29b-41d4-a716-446655440006',
-            '880e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440001',
             'Hey! I saw your question about microservices in the StackMentors group. I have some experience with that.',
             NULL,
-            NOW() - INTERVAL '30 minutes'
+            NOW() - INTERVAL '30 minutes',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440007',
-            '880e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440002',
             'That would be amazing! Would you be willing to mentor me on this topic?',
             NULL,
-            NOW() - INTERVAL '20 minutes'
+            NOW() - INTERVAL '20 minutes',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440008',
-            '880e8400-e29b-41d4-a716-446655440001',
             '550e8400-e29b-41d4-a716-446655440001',
             'Absolutely! Let''s set up a call this week. Here''s a useful resource to get started.',
             'https://example.com/microservices-guide.pdf',
-            NOW() - INTERVAL '10 minutes'
+            NOW() - INTERVAL '10 minutes',
+            NULL,
+            FALSE,
+            NULL
             );
 
-            -- Direct messages between user 2 and user 3 (conversation_id: 880e8400-e29b-41d4-a716-446655440002)
+            -- Direct messages between user 2 and user 3
             INSERT INTO messages (
-            message_id, conversation_id, sender_id, content, media_url, sent_at
+            message_id, sender_id, content, media_url, sent_at, edited_at, is_deleted, deleted_at
             ) VALUES
             (
             '990e8400-e29b-41d4-a716-446655440009',
-            '880e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440002',
             'Hi! I noticed you''re in both BusinessConnect and DesignPros. That''s a great combination!',
             NULL,
-            NOW() - INTERVAL '1 hour'
+            NOW() - INTERVAL '1 hour',
+            NULL,
+            FALSE,
+            NULL
             ),
             (
             '990e8400-e29b-41d4-a716-446655440010',
-            '880e8400-e29b-41d4-a716-446655440002',
             '550e8400-e29b-41d4-a716-446655440003',
             'Thanks! I believe good design and business strategy go hand in hand. Are you interested in UX/UI?',
             NULL,
-            NOW() - INTERVAL '50 minutes'
+            NOW() - INTERVAL '50 minutes',
+            NULL,
+            FALSE,
+            NULL
             );
         </sql>
     </changeSet>

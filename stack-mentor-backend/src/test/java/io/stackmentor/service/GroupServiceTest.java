@@ -1,6 +1,6 @@
 package io.stackmentor.service;
 
-import io.stackmentor.dto.GroupDto;
+import io.stackmentor.dto.group.GroupDto;
 import io.stackmentor.enums.GroupMemberType;
 import io.stackmentor.model.Group;
 import io.stackmentor.model.GroupMember;

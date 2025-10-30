@@ -1,4 +1,4 @@
-package io.stackmentor.dto;
+package io.stackmentor.dto.user;
 
 import io.stackmentor.enums.RoleType;
 import jakarta.validation.constraints.*;

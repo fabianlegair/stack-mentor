@@ -1,7 +1,7 @@
 package io.stackmentor.service;
 
-import io.stackmentor.dto.RegisterUserDto;
-import io.stackmentor.dto.UserDto;
+import io.stackmentor.dto.user.RegisterUserDto;
+import io.stackmentor.dto.user.UserDto;
 import io.stackmentor.enums.PositionType;
 import io.stackmentor.enums.RoleType;
 import io.stackmentor.model.User;
@@ -9,6 +9,8 @@ import io.stackmentor.model.VerificationToken;
 import io.stackmentor.repository.UserRepository;
 import io.stackmentor.repository.VerificationTokenRepository;
 import io.stackmentor.specification.UserSpecificationBuilder;
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
@@ -19,20 +21,18 @@ import java.util.UUID;
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
-    private final VerificationTokenRepository verificationTokenRepository;
-    private final EmailService emailService;
-    private final UserSpecificationBuilder specBuilder;
+    @Autowired
+    private UserRepository userRepository;
 
-    public UserService(UserRepository userRepository,
-                       VerificationTokenRepository verificationTokenRepository,
-                       EmailService emailService,
-                       UserSpecificationBuilder specBuilder) {
-        this.userRepository = userRepository;
-        this.verificationTokenRepository = verificationTokenRepository;
-        this.emailService = emailService;
-        this.specBuilder = specBuilder;
-    }
+    @Autowired
+    private VerificationTokenRepository verificationTokenRepository;
+
+    @Autowired
+    private EmailService emailService;
+
+    @Autowired
+    private UserSpecificationBuilder specBuilder;
+
 
     private UserDto convertToDto(User user) {
         return UserDto.builder()
@@ -59,6 +59,7 @@ public class UserService {
                 .build();
     }
 
+    @Transactional
     public UserDto registerUser(RegisterUserDto dto) {
 
         // Business logic for registering a user
@@ -117,7 +118,11 @@ public class UserService {
         verificationTokenRepository.save(vt);
 
         // Send verification email
-        emailService.sendVerificationEmail(dto.getEmail(), token);
+        try {
+            emailService.sendVerificationEmail(dto.getEmail(), token);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to send email", e);
+        }
 
         return convertToDto(savedUser);
     }

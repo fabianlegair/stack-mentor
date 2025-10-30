@@ -15,20 +15,20 @@ import java.util.UUID;
 @AllArgsConstructor
 public class MessageReadStatusId implements Serializable {
 
-    private UUID messageId;
-    private UUID userId;
+    private UUID message;
+    private UUID user;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MessageReadStatusId that = (MessageReadStatusId) o;
-        return Objects.equals(messageId, that.messageId) &&
-                Objects.equals(userId, that.userId);
+        return Objects.equals(message, that.message) &&
+                Objects.equals(user, that.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(messageId, userId);
+        return Objects.hash(message, user);
     }
 }

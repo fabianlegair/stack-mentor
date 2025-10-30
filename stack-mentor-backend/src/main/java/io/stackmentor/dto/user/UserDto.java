@@ -1,4 +1,4 @@
-package io.stackmentor.dto;
+package io.stackmentor.dto.user;
 
 import io.stackmentor.enums.PositionType;
 import io.stackmentor.enums.RoleType;

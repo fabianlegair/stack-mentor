@@ -5,21 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6d228ef-884b-4e0f-bec3-d9c066f09b2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupMemberDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/dto/GroupMemberValidationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/GroupServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/message/MessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/MessageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/CreateGroupDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMemberId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/GroupMemberId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/group/GroupDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/GroupMemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/group/GroupMemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/RegisterUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/user/RegisterUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/dto/user/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/enums/ConversationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/Conversation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/DirectConversationParticipant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/DirectConversationParticipantId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/MessageReadStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/MessageReadStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/MessageReadStatusId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/model/MessageReadStatusId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/ConversationRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/GroupMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/GroupMemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/MessageReadStatusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/MessageReadStatusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/repository/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/GroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/stackmentor/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/001-init.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/003-insert-groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/003-insert-groups.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/007-insert-messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/007-insert-messages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/dto/RegisterUserDtoValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/dto/RegisterUserDtoValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/EmailServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/GroupServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/GroupServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/stackmentor/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +60,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,6 +80,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.EmailServiceTest.executor": "Run",
     "Gradle.EmailServiceTest.sendVerificationEmail_sendsCorrectMessage.executor": "Run",
     "Gradle.GroupServiceTest.createGroup_createsGroupSucessfully.executor": "Run",
     "Gradle.GroupServiceTest.executor": "Run",
@@ -99,7 +111,31 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.UserServiceTest">
+  <component name="RunManager" selected="Gradle.EmailServiceTest">
+    <configuration name="EmailServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.stackmentor.service.EmailServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="GroupServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -196,37 +232,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest.searchUsers_parsesExperienceRangeWithPlus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;io.stackmentor.service.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.EmailServiceTest" />
         <item itemvalue="Gradle.UserServiceTest" />
         <item itemvalue="Gradle.GroupServiceTest.createGroup_createsGroupSucessfully" />
         <item itemvalue="Gradle.GroupServiceTest" />
         <item itemvalue="Gradle.UserServiceTest.searchUsers_callsUserSpecificationsWithParsedExperienceRange" />
-        <item itemvalue="Gradle.UserServiceTest.searchUsers_parsesExperienceRangeWithPlus" />
       </list>
     </recent_temporary>
   </component>

@@ -1,5 +1,6 @@
 package io.stackmentor.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -8,11 +9,10 @@ import org.springframework.scheduling.annotation.Async;
 @Service
 public class EmailService {
 
-    private final JavaMailSender mailSender;
+    @Autowired
+    private JavaMailSender mailSender;
 
-    public EmailService(JavaMailSender mailSender) {
-        this.mailSender = mailSender;
-    }
+
 
     @Async
     public void sendVerificationEmail(String to, String token) {

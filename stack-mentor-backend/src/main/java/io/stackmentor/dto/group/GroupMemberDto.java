@@ -1,4 +1,4 @@
-package io.stackmentor.dto;
+package io.stackmentor.dto.group;
 
 import io.stackmentor.enums.GroupMemberType;
 import lombok.AllArgsConstructor;
